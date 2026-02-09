@@ -42,9 +42,6 @@ This design enables safer and more reliable parking in dynamic, pedestrian-inter
 We introduce **DynaPark-Ped**, a newly collected **ego-centric, multi-modal dynamic parking dataset** built in the **CARLA simulator**, specifically designed for **pedestrian-interactive parking scenarios**.
 Each frame contains synchronized perception data, vehicle states, and pedestrian annotations, enabling research on **joint perception, prediction, and planning**.
 
-<p align="center">
-  <img src="assets/dataset_contents.png" alt="DynaPark-Ped Dataset Modalities" width="800"/>
-</p>
 
 ### 1. Surround-View Image Data
 
@@ -63,8 +60,6 @@ In addition to RGB images, we also include:
 - **Top-down occupancy-style view**  
   A bird’s-eye spatial representation describing obstacles and scene layout around the vehicle.
 
-These visual modalities support **scene understanding**, **obstacle localization**, and **pedestrian motion reasoning**.
-
 ---
 
 ### 2. LiDAR Point Cloud
@@ -75,8 +70,6 @@ LiDAR provides:
 
 - Accurate 3D geometric structure of the parking environment  
 - Reliable spatial information for static obstacles and surrounding structures  
-
-This modality complements cameras, especially under challenging lighting or partial occlusion.
 
 ---
 
@@ -93,11 +86,6 @@ We record detailed **vehicle kinematics and control signals**, including:
   - brake  
   - gear  
 
-These signals are essential for:
-
-- Learning imitation-based parking policies  
-- Modeling vehicle dynamics during closed-loop evaluation
-
 ---
 
 ### 4. Pedestrian Annotations
@@ -110,14 +98,7 @@ To support pedestrian-aware decision making, the dataset provides structured ped
 - **2D bounding boxes** in image space
 - Temporal consistency for tracking and trajectory modeling
 
-These annotations enable:
-
-- Pedestrian trajectory prediction  
-- Interaction-aware planning  
-- Safety evaluation in dynamic parking scenarios
-
 ---
-
 ### Summary of Modalities
 
 | Modality | Description |
