@@ -25,12 +25,12 @@ This design enables safer and more reliable parking in dynamic, pedestrian-inter
 
 ## Parking Demonstrations
 
-### Scenario 1 – Pedestrian Crossing During Parking
+### Scenario 1 – pedestrian yields during parking
 <p align="center">
   <img src="assets/animation1.gif" alt="Parking Scenario 1" width="600"/>
 </p>
 
-### Scenario 2 – Complex Pedestrian Interaction
+### Scenario 2 – pedestrian continues crossing during parking
 <p align="center">
   <img src="assets/animation2.gif" alt="Parking Scenario 2" width="600"/>
 </p>
