@@ -43,7 +43,7 @@ We introduce **DynaPark-Ped**, a newly collected **ego-centric, multi-modal dyna
 Each frame contains synchronized perception data, vehicle states, and pedestrian annotations, enabling research on **joint perception, prediction, and planning**.
 
 <p align="center">
-  <img src="assets/dataset_contents.png" alt="DynaPark-Ped Dataset Modalities" width="700"/>
+  <img src="assets/dataset_contents.png" alt="DynaPark-Ped Dataset Modalities" width="800"/>
 </p>
 
 ### 1. Surround-View Image Data
@@ -54,3 +54,79 @@ The dataset provides **four-view camera images** covering the full surroundings 
 - **Left view (RGB)**
 - **Right view (RGB)**
 - **Rear view (RGB)**
+
+In addition to RGB images, we also include:
+
+- **Depth images (per view)**  
+  Providing pixel-wise distance information for geometry-aware perception.
+
+- **Top-down occupancy-style view**  
+  A bird’s-eye spatial representation describing obstacles and scene layout around the vehicle.
+
+These visual modalities support **scene understanding**, **obstacle localization**, and **pedestrian motion reasoning**.
+
+---
+
+### 2. LiDAR Point Cloud
+
+Each timestamp contains a **3D LiDAR point cloud** captured from the ego vehicle.
+
+LiDAR provides:
+
+- Accurate 3D geometric structure of the parking environment  
+- Reliable spatial information for static obstacles and surrounding structures  
+
+This modality complements cameras, especially under challenging lighting or partial occlusion.
+
+---
+
+### 3. Ego-Vehicle State and Control Data
+
+We record detailed **vehicle kinematics and control signals**, including:
+
+- Vehicle position: **(x, y)**
+- Orientation: **yaw, pitch, roll**
+- Motion states: **speed, acceleration**
+- Control commands:
+  - throttle  
+  - steering  
+  - brake  
+  - gear  
+
+These signals are essential for:
+
+- Learning imitation-based parking policies  
+- Modeling vehicle dynamics during closed-loop evaluation
+
+---
+
+### 4. Pedestrian Annotations
+
+To support pedestrian-aware decision making, the dataset provides structured pedestrian information:
+
+- **Pedestrian ID**
+- **Position (x, y)**
+- **Yaw (heading direction)**
+- **2D bounding boxes** in image space
+- Temporal consistency for tracking and trajectory modeling
+
+These annotations enable:
+
+- Pedestrian trajectory prediction  
+- Interaction-aware planning  
+- Safety evaluation in dynamic parking scenarios
+
+---
+
+### Summary of Modalities
+
+| Modality | Description |
+|----------|-------------|
+| Multi-view RGB | Front / Left / Right / Rear camera images |
+| Depth Images | Per-view geometric depth maps |
+| Top-down View | Bird’s-eye occupancy-style representation |
+| LiDAR | 3D point cloud of the environment |
+| Vehicle Data | Pose, motion states, and control signals |
+| Pedestrian Data | IDs, positions, orientations, and bounding boxes |
+
+DynaPark-Ped provides a comprehensive multi-modal benchmark for developing **pedestrian-aware autonomous parking systems** in dynamic environments.
