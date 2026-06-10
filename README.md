@@ -1,5 +1,12 @@
 # DynaPark-Ped  
+
+**DynaPark-Ped** is the dataset introduced in the paper:
+
 **Pedestrian-Aware End-to-End Autonomous Parking via Coupling-Regulated Multi-Task Learning**
+
+The dataset is publicly available on Hugging Face:
+
+👉 https://huggingface.co/datasets/Moon2333/DynaPark-Ped
 
 ## Overview
 
